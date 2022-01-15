@@ -1,0 +1,49 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Extend fallback
+//  _____________________________________________
+
+//  Magento extend fallback handling. Should be EMPTY.
+
+@button-primary__background: #53A828;
+@button__border-radius: 30px;
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .logo {
+        float: right;
+    }
+
+    .minicart-wrapper,
+    .block.block-search {
+        float: left;
+    }
+
+    .product-item {
+        .tocart {
+            border-radius: @button__border-radius;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

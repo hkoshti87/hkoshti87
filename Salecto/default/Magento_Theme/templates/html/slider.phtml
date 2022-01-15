@@ -1,0 +1,22 @@
+<h1>This is Manage from HTML <h1>
+<div class="slider-new">
+    <div><img src='<?php echo $this->getViewFileUrl('images/home-main1.jpg'); ?>' alt="Slider1"></div>
+    <div><img src='<?php echo $this->getViewFileUrl('images/home-main2.jpg'); ?>' alt="Slider2"></div>
+    <div><img src='<?php echo $this->getViewFileUrl('images/home-main3.jpg'); ?>' alt="Slider3"></div>
+</div>
+<script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'slick'
+    ], function($){
+        $(document).ready(function() {
+            $('.slider-new').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                arrows: false
+            });
+        });
+    });
+</script>
